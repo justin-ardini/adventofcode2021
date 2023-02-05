@@ -57,11 +57,14 @@ class Vec2d:
   def add(self, v):
     return self + v
 
-  def __sub__(self):
+  def __sub__(self, v):
     return Vec2d(self.x - v.x, self.y - v.y)
 
   def sub(self, v):
     return self - v
+
+  def __neg__(self):
+    return Vec2d(-self.x, -self.y)
 
   def __mul__(self, s: Number):
     return Vec2d(self.x * s, self.y * s)
